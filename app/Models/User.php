@@ -7,11 +7,13 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Auth;
 use Spatie\Permission\Traits\HasRoles;
+use Vinkla\Hashids\Facades\Hashids;
 
 class User extends Authenticatable implements JWTSubject
 {
     use Traits\LastActivedAtHelper;
     use Traits\ActiveUserHelper;
+    use Traits\HashIdHelper;
     use HasRoles;
     use Notifiable {
         notify as protected laravelNotify;

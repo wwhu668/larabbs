@@ -4,6 +4,7 @@ namespace App\Observers;
 
 use App\Models\Link;
 use Cache;
+use Hashids\Hashids;
 
 class LinkObserver
 {

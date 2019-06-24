@@ -86,6 +86,7 @@ return [
              */
             'disks' => [
                 'local',
+                'qiniu',
             ],
         ],
 
@@ -146,7 +147,7 @@ return [
     'monitorBackups' => [
         [
             'name' => config('app.name'),
-            'disks' => ['local'],
+            'disks' => ['local', 'qiniu'],
             'newestBackupsShouldNotBeOlderThanDays' => 1,
             'storageUsedMayNotBeHigherThanMegabytes' => 5000,
         ],
